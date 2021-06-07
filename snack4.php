@@ -31,7 +31,7 @@ function getNumRandomArray($min, $max, $items ){
 
     // se il numero generato $number NON è già presente nell'array...
     if(!in_array($number, $randomArray)){
-      // ...lo inserisco nell'array nell'array
+      // ...lo inserisco nell'array 
       $randomArray[] = $number;
     }
   }
