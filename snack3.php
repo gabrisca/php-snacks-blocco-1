@@ -63,21 +63,21 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z -->
 
 
     <!-- ciclo gli l'array $posts -->
-    <?php foreach ($posts as $post => $info) { ?>
+    <?php foreach ($posts as $key => $post) { ?>
       <h3>
       <hr>
         <?php
-          echo "$post:"; // stampo ogni $post (la data) di $posts
+          echo "$key:"; // stampo ogni $key (la data) di $posts
         ?>
       </h3>
 
-      <!-- su ogni informazione degli array $post faccio un ciclo for per estrarne 'title', 'author' e 'text' -->
+      <!-- su ogni $post faccio un ciclo for per estrarne 'title', 'author' e 'text' -->
       <p>
         <?php
-        for ($i = 0; $i < count($info); $i++) {
-          echo "<h4>{$info[$i]['title']}:</h4>";
-          // echo "{$info[$i]['author']}<br>";
-          echo "{$info[$i]['text']}<br>";
+        for ($i = 0; $i < count($post); $i++) {
+          echo "<h4>{$post[$i]['title']}:</h4>";
+          // echo "{$post[$i]['author']}<br>";
+          echo "{$post[$i]['text']}<br>";
         };
         ?>
       </p>
