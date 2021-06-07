@@ -65,22 +65,31 @@
     <div class="grey">
       <ul>
         <?php
-        foreach ($db['teachers'] as $value) { 
+        foreach ($db['teachers'] as $value) {
         ?>
           <li>
+            <?php
+            echo $value['name'] ?> 
             <?php 
-              echo $value['name'] ?> <?php $value['lastname'] 
+            $value['lastname']
             ?>
           </li>
         <?php } ?>
       </ul>
     </div>
+
     <div class="green">
       <ul>
         <?php
-        foreach ($db['pm'] as $value) { ?>
+        foreach ($db['pm'] as $value) {
+        ?>
           <li>
-            <?php echo $value['name'] ?> <?php $value['lastname'] ?>
+            <?php
+            echo $value['name']
+            ?>
+            <?php
+            $value['lastname']
+            ?>
           </li>
         <?php } ?>
       </ul>
